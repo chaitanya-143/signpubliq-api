@@ -15,12 +15,16 @@ const allowedOrigins = [
     process.env.CORS_ORIGIN
 ];
 
+import authRoutes from './routes/auth.routes.js';
+
 app.use(
     cors({
         origin: allowedOrigins,
         credentials: true,
     })
 );
+
+app.use("/api/v1/auth", authRoutes);
 
 app.get("/api/v1", (req, res) => {
     res.send("signPublicQ API is running....");
