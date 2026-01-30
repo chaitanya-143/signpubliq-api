@@ -16,6 +16,7 @@ const allowedOrigins = [
 ];
 
 import authRoutes from './routes/auth.routes.js';
+import dashboardRoutes from './routes/dashboard.routes.js';
 
 app.use(
     cors({
@@ -25,6 +26,7 @@ app.use(
 );
 
 app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/dashboard", dashboardRoutes);
 
 app.get("/api/v1", (req, res) => {
     res.send("signPublicQ API is running....");
