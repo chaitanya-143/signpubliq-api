@@ -6,7 +6,7 @@ env.config();
 const tenantId = process.env.AZURE_TENANT_ID;
 const clientId = process.env.AZURE_CLIENT_ID;
 const clientSecret = process.env.AZURE_CLIENT_SECRET;
-const senderEmail = "hiringxchange-noreply@hiringxchange.com"; 
+const senderEmail = "noreply@signpubliq.com";
 
 const credential = new ClientSecretCredential(tenantId, clientId, clientSecret);
 
